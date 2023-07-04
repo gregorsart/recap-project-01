@@ -73,7 +73,27 @@ h1 {
 }
 
 h2 {
-  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-weight: 200;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.233);
 }
 
 /* BEM like styles */
@@ -124,7 +144,9 @@ h2 {
   gap: 0.7rem;
 }
 
-.card--taglist li {
+.card--taglist li,
+.profile--button {
+  color: var(--main-text-color);
   font-size: 0.8rem;
   border: 1px solid var(--main-accent-color);
   padding: 0.5rem 1rem;
@@ -158,6 +180,67 @@ h2 {
 }
 
 .nav--list a:hover {
+  color: var(--main-accent-color);
+}
+
+/* Profile Page */
+
+.profile--card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile--card svg {
+  width: 6rem;
+  height: 6rem;
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.profile h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile p {
+  width: min(90%, 400px);
+}
+
+.profile--button {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile--button:hover svg {
+  color: var(--main-accent-color);
+}
+
+.profile--tags {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.darkmode--card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.darkmode--card p {
+  width: fit-content;
+}
+
+.darkmode--card svg {
+  color: var(--main-text-color);
+  width: 3rem;
+  height: 3rem;
+}
+
+.darkmode--card button:hover svg {
   color: var(--main-accent-color);
 }
 
