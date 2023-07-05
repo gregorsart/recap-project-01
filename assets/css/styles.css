@@ -1,0 +1,309 @@
+/* rubik-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/rubik-v26-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/rubik-v26-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik-v26-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik-v26-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CSS RESET */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Style Variables */
+
+  --main-bg-color: rgb(51, 66, 66);
+  --main-accent-color: salmon;
+  --main-text-color: white;
+}
+
+/* General Styles */
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-weight: 400;
+}
+
+main {
+  margin: 2rem;
+  margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--main-bg-color);
+  position: fixed;
+  bottom: 0;
+}
+
+section {
+  background-color: rgba(22, 85, 57, 0.233);
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid var(--main-text-color);
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Specific Styles */
+
+h1 {
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin: 2rem 2rem;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-weight: 200;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.233);
+}
+
+/* BEM like styles */
+
+.card--decoration {
+  position: absolute;
+  right: 0.5rem;
+  top: -0.8rem;
+  background-color: transparent;
+  border: 0;
+}
+
+.card--decoration svg {
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.card--decoration svg:hover {
+  color: salmon;
+  cursor: pointer;
+}
+
+.card--button {
+  align-self: center;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  width: max-content;
+  background-color: var(--main-accent-color);
+  border: 0;
+  padding: 0.8rem 2rem;
+  color: rgb(51, 66, 66);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.card--button:hover {
+  background-color: transparent;
+  border: 2px solid salmon;
+  color: var(--main-text-color);
+}
+
+.card--taglist {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+
+.card--taglist li,
+.profile--button {
+  color: var(--main-text-color);
+  font-size: 0.8rem;
+  border: 1px solid var(--main-accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 255, 255, 0.064);
+}
+
+.nav--list {
+  height: 5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.nav--list li {
+  padding: 1rem 1rem;
+}
+
+.nav--list li:hover {
+  background-color: rgba(22, 85, 57, 0.233);
+}
+
+.nav--list svg {
+  margin-top: 0.1rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.nav--list a {
+  color: var(--main-text-color);
+}
+
+.nav--list a:hover {
+  color: var(--main-accent-color);
+}
+
+/* Profile Page */
+
+.profile--card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile--card svg {
+  width: 6rem;
+  height: 6rem;
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.profile h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile p {
+  width: min(90%, 400px);
+  line-height: 1.5;
+}
+
+.profile--button {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile--button:hover svg {
+  color: var(--main-accent-color);
+}
+
+.profile--tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.darkmode--card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.darkmode--card p {
+  width: fit-content;
+  margin-bottom: 0.3rem;
+}
+
+.darkmode--card svg {
+  color: var(--main-text-color);
+  width: 3rem;
+  height: 3rem;
+}
+
+.darkmode--card button:hover svg {
+  color: var(--main-accent-color);
+}
+
+/* Active Nav Element */
+
+.nav--list .active:hover {
+  color: var(--main-text-color);
+}
+
+.nav--list .active li {
+  background-color: var(--main-accent-color);
+}
+
+/* Active Bookmark Element */
+
+button.active svg {
+  color: var(--main-accent-color);
+}
