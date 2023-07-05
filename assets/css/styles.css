@@ -55,27 +55,41 @@
   --main-bg-color: rgb(51, 66, 66);
   --main-accent-color: salmon;
   --main-text-color: white;
+  --main-width-mobile: 400px;
 }
 
 /* General Styles */
 
 body {
   font-family: "Rubik", sans-serif;
-  background-color: var(--main-bg-color);
+  background-color: gray;
   color: var(--main-text-color);
   font-weight: 400;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  max-width: var(--main-width-mobile);
 }
 
 main {
-  margin: 2rem;
-  margin-bottom: 7rem;
+  padding: 2rem;
+  padding-bottom: 7rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: var(--main-width-mobile);
+  background-color: var(--main-bg-color);
 }
 
 footer {
   width: 100%;
+  max-width: var(--main-width-mobile);
   background-color: var(--main-bg-color);
   position: fixed;
   bottom: 0;
@@ -119,6 +133,7 @@ h2 {
   font-size: 1.6rem;
   font-weight: 200;
   margin: 2rem 2rem;
+  margin-left: 0;
   line-height: 1.4;
 }
 
