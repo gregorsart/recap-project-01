@@ -322,3 +322,10 @@ hr {
 button.active svg {
   color: var(--main-accent-color);
 }
+
+/* DARK MODE */
+
+.lightmode {
+  color: var(--main-bg-color);
+  background-color: rgb(205, 205, 205);
+}
