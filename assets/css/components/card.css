@@ -1,4 +1,4 @@
-.card--decoration {
+.card__decoration {
   position: absolute;
   right: 0.5rem;
   top: -0.8rem;
@@ -6,18 +6,18 @@
   border: 0;
 }
 
-.card--decoration svg {
+.card__decoration svg {
   color: white;
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.card--decoration svg:hover {
+.card__decoration svg:hover {
   color: salmon;
   cursor: pointer;
 }
 
-.card--button {
+.card__button {
   align-self: center;
   font-size: 1rem;
   letter-spacing: 0.05rem;
@@ -31,21 +31,20 @@
   border: 2px solid transparent;
 }
 
-.card--button:hover {
+.card__button:hover {
   background-color: transparent;
   border: 2px solid salmon;
   color: var(--main-text-color);
 }
 
-.card--taglist {
+.card__taglist {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   gap: 0.7rem;
 }
 
-.card--taglist li,
-.profile--button {
+.card__taglist li {
   color: var(--main-text-color);
   font-size: 0.8rem;
   border: 1px solid var(--main-accent-color);

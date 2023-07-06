@@ -50,7 +50,7 @@
 }
 
 :root {
-  /* Style Variables */
+  /* Style & Layout Variables */
 
   --main-bg-color: rgb(51, 66, 66);
   --main-accent-color: salmon;
@@ -160,11 +160,11 @@ hr {
 
 /* Active Nav Element */
 
-.nav--list .active:hover {
+.nav__list .active:hover {
   color: var(--main-text-color);
 }
 
-.nav--list .active li {
+.nav__list .active li {
   background-color: var(--main-accent-color);
 }
 
