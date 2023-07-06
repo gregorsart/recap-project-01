@@ -1,6 +1,7 @@
 "use strict";
 
 console.clear();
+console.log("newbie");
 
 // VARIABLE DECLARATION
 

@@ -83,7 +83,7 @@ header {
 main {
   padding: 2rem;
   padding-bottom: 7rem;
-  height: 100vh;
+  height: max-content;
   display: flex;
   flex-direction: column;
   gap: 2rem;
