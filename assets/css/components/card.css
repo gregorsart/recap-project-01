@@ -1,0 +1,55 @@
+.card--decoration {
+  position: absolute;
+  right: 0.5rem;
+  top: -0.8rem;
+  background-color: transparent;
+  border: 0;
+}
+
+.card--decoration svg {
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.card--decoration svg:hover {
+  color: salmon;
+  cursor: pointer;
+}
+
+.card--button {
+  align-self: center;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  width: max-content;
+  background-color: var(--main-accent-color);
+  border: 0;
+  padding: 0.8rem 2rem;
+  color: rgb(51, 66, 66);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.card--button:hover {
+  background-color: transparent;
+  border: 2px solid salmon;
+  color: var(--main-text-color);
+}
+
+.card--taglist {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+
+.card--taglist li,
+.profile--button {
+  color: var(--main-text-color);
+  font-size: 0.8rem;
+  border: 1px solid var(--main-accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 255, 255, 0.064);
+}

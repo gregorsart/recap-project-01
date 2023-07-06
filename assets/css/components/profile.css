@@ -1,0 +1,40 @@
+.profile--card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile--card svg {
+  width: 6rem;
+  height: 6rem;
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.profile h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile p {
+  width: min(90%, 400px);
+  line-height: 1.5;
+}
+
+.profile--button {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile--button:hover svg {
+  color: var(--main-accent-color);
+}
+
+.profile--tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
