@@ -5,16 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App // Recap Project I</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/main.js" defer></script>
   </head>
-  <body>
+  <body data-js="body">
     <header>
       <h1>Quiz App</h1>
+      <button type="button" data-js="darkmodeToggleButton">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7 13a1 1 0 1 0 0-2a1 1 0 0 0 0 2Z"
+            />
+            <path d="M17 17H7A5 5 0 0 1 7 7h10a5 5 0 0 1 0 10Z" />
+          </g>
+        </svg>
+      </button>
     </header>
     <main>
       <!-- Card Start -->
       <section>
         <button class="card--decoration">
           <svg
+            role="img"
+            aria-label="Bookmark Icon"
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
@@ -27,7 +48,9 @@
           </svg>
         </button>
         <h2>What property flips the axes in flexbox?</h2>
-        <button class="card--button">Show Answer</button>
+        <button class="card--button" aria-label="show answer">
+          Show Answer
+        </button>
         <ul class="card--taglist">
           <li>#html</li>
           <li>#flexbox</li>
@@ -39,6 +62,8 @@
       <section>
         <button class="card--decoration">
           <svg
+            role="img"
+            aria-label="Bookmark Icon"
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
@@ -51,7 +76,9 @@
           </svg>
         </button>
         <h2>How many headline types are there overall?</h2>
-        <button class="card--button">Show Answer</button>
+        <button class="card--button" aria-label="show answer">
+          Show Answer
+        </button>
         <ul class="card--taglist">
           <li>#html</li>
           <li>#semantic</li>
@@ -63,6 +90,8 @@
       <section>
         <button class="card--decoration">
           <svg
+            role="img"
+            aria-label="Bookmark Icon"
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
@@ -75,10 +104,11 @@
           </svg>
         </button>
         <h2>What html element uses an alt tag and why do we use it?</h2>
-        <button class="card--button">Show Answer</button>
+        <button class="card--button" aria-label="show answer">
+          Show Answer
+        </button>
         <ul class="card--taglist">
           <li>#html</li>
-
           <li>#css</li>
         </ul>
       </section>
@@ -91,6 +121,8 @@
           <a aria-label="go to home page" href="./index.html" class="active">
             <li>
               <svg
+                role="img"
+                aria-label="Home Icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
                 height="32"
@@ -107,6 +139,8 @@
           <a aria-label="go to bookmarks page" href="./bookmarks.html">
             <li>
               <svg
+                role="img"
+                aria-label="Bookmarks Icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
                 height="32"
@@ -123,6 +157,8 @@
           <a aria-label="go to profile page" href="./profile.html">
             <li>
               <svg
+                role="img"
+                aria-label="Profile Icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
                 height="32"
