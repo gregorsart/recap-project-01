@@ -74,7 +74,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   background-color: var(--main-bg-color);
   width: 100%;
   max-width: var(--main-width-mobile);
@@ -83,10 +82,10 @@ header {
 main {
   padding: 2rem;
   padding-bottom: 7rem;
-  height: max-content;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-height: calc(100vh - 130px);
   max-width: var(--main-width-mobile);
   background-color: var(--main-bg-color);
 }
