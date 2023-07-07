@@ -1,4 +1,4 @@
-.card__decoration {
+.card__button--bookmark {
   position: absolute;
   right: 0.5rem;
   top: -0.8rem;
@@ -6,13 +6,13 @@
   border: 0;
 }
 
-.card__decoration svg {
+.bookmark__icon {
   color: white;
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.card__decoration svg:hover {
+.bookmark__icon:hover {
   color: salmon;
   cursor: pointer;
 }
@@ -44,7 +44,7 @@
   gap: 0.7rem;
 }
 
-.card__taglist li {
+.taglist__item {
   color: var(--main-text-color);
   font-size: 0.8rem;
   border: 1px solid var(--main-accent-color);

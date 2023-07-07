@@ -12,6 +12,7 @@
       <h1>Quiz App</h1>
       <button type="button" data-js="darkmodeToggleButton">
         <svg
+          class="bookmark__icon"
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
@@ -32,8 +33,9 @@
     <main>
       <!-- Card Start -->
       <section>
-        <button class="card__decoration active">
+        <button class="card__button--bookmark active">
           <svg
+            class="bookmark__icon"
             role="img"
             aria-label="Bookmark Icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -52,64 +54,9 @@
           Show Answer
         </button>
         <ul class="card__taglist">
-          <li>#html</li>
-          <li>#semantic</li>
-          <li>#css</li>
-        </ul>
-      </section>
-      <!-- Card End -->
-      <!-- Card Start -->
-      <section>
-        <button class="card__decoration active">
-          <svg
-            role="img"
-            aria-label="Bookmark Icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M5 21V5q0-.825.588-1.413T7 3h10q.825 0 1.413.588T19 5v16l-7-3l-7 3Z"
-            />
-          </svg>
-        </button>
-        <h2>What property flips the axes in flexbox?</h2>
-        <button class="card__button" aria-label="show answer">
-          Show Answer
-        </button>
-        <ul class="card__taglist">
-          <li>#html</li>
-          <li>#flexbox</li>
-          <li>#css</li>
-        </ul>
-      </section>
-      <!-- Card End -->
-      <!-- Card Start -->
-      <section>
-        <button class="card__decoration active">
-          <svg
-            role="img"
-            aria-label="Bookmark Icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M5 21V5q0-.825.588-1.413T7 3h10q.825 0 1.413.588T19 5v16l-7-3l-7 3Z"
-            />
-          </svg>
-        </button>
-        <h2>What html element uses an alt tag and why do we use it?</h2>
-        <button class="card__button" aria-label="show answer">
-          Show Answer
-        </button>
-        <ul class="card__taglist">
-          <li>#html</li>
-          <li>#css</li>
+          <li class="taglist__item">#html</li>
+          <li class="taglist__item">#semantic</li>
+          <li class="taglist__item">#css</li>
         </ul>
       </section>
       <!-- Card End -->
