@@ -181,3 +181,13 @@ button.active svg {
   color: var(--main-bg-color);
   background-color: rgb(205, 205, 205);
 }
+
+/* Toggle Question / Answer */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+}

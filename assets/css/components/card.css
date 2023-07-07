@@ -52,3 +52,23 @@
   border-radius: 0.3rem;
   background-color: var(--main-button-bg-color);
 }
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dashed rgba(250, 128, 114, 0.473);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.card__answer {
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 1rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.card__answer svg {
+  align-self: center;
+}
