@@ -1,0 +1,28 @@
+.nav__list {
+  height: 5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.nav__list li {
+  padding: 1rem 1rem;
+}
+
+.nav__list li:hover {
+  background-color: rgba(22, 85, 57, 0.233);
+}
+
+.nav__list svg {
+  margin-top: 0.1rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.nav__list a {
+  color: var(--main-text-color);
+}
+
+.nav__list a:hover {
+  color: var(--main-accent-color);
+}
