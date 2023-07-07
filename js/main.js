@@ -30,15 +30,17 @@ darkmodeToggleButton.addEventListener("click", () => {
 
 // Show Answer / Hide Answer
 console.log([showAnswerButton]);
-showAnswerButton.addEventListener("click", () => {
-  console.log("click!");
-  if (showAnswerButton.innerText === "Show Answer") {
-    showAnswerButton.innerText = "Hide Answer";
-    answerElement.classList.remove("hidden");
-    answerElement.classList.add("visible");
-  } else {
-    showAnswerButton.innerText = "Show Answer";
-    answerElement.classList.remove("visible");
-    answerElement.classList.add("hidden");
-  }
-});
+
+showAnswerButton &&
+  showAnswerButton.addEventListener("click", () => {
+    console.log("click!");
+    if (showAnswerButton.innerText === "Show Answer") {
+      showAnswerButton.innerText = "Hide Answer";
+      answerElement.classList.remove("hidden");
+      answerElement.classList.add("visible");
+    } else {
+      showAnswerButton.innerText = "Show Answer";
+      answerElement.classList.remove("visible");
+      answerElement.classList.add("hidden");
+    }
+  });
