@@ -50,5 +50,5 @@
   border: 1px solid var(--main-accent-color);
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
-  background-color: rgba(34, 83, 83, 0.681);
+  background-color: var(--main-button-bg-color);
 }

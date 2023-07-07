@@ -12,9 +12,10 @@ const darkmodeToggleButton = document.querySelector(
   '[data-js="darkmodeToggleButton"]'
 );
 
+// EVENT LISTENER & LOGIC
+
 darkmodeToggleButton.addEventListener("click", () => {
   const htmlCollection = htmlBodyTag.children;
-
   for (let item of htmlCollection) {
     item.classList.toggle("lightmode");
   }
