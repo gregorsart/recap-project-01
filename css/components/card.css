@@ -72,3 +72,7 @@
 .card__answer svg {
   align-self: center;
 }
+
+.card__icon--questionmark {
+  color: salmon;
+}

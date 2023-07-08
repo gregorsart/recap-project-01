@@ -13,8 +13,14 @@ const darkmodeToggleButton = document.querySelector(
 );
 
 // Show Answer / Hide Answer
-const answerElement = document.querySelector('[data-js="answer"]');
-const showAnswerButton = document.querySelector('[data-js="showAnswerButton"]');
+// const answerElements = document.querySelectorAll('[data-js="answer"]');
+// const showAnswerButtons = document.querySelectorAll(
+//   '[data-js="showAnswerButton"]'
+// );
+
+const htmlCards = document.querySelectorAll('[data-js="card"]');
+
+console.log("output:", htmlCards);
 
 // EVENT LISTENER & LOGIC
 
@@ -29,10 +35,15 @@ darkmodeToggleButton.addEventListener("click", () => {
 });
 
 // Show Answer / Hide Answer Animation
+// Works for all the Cards that get added
 
-// if shoAnswerButton can not be assigned, do nothing
-showAnswerButton &&
+[...htmlCards].forEach((ele) => {
+  const showAnswerButton = ele.querySelector('[data-js="showAnswerButton"]');
   showAnswerButton.addEventListener("click", () => {
+    console.log(showAnswerButton.innerText);
+    console.log("ele:", ele);
+    const answerElement = ele.querySelector('[data-js="answer"]');
+    console.log("ele Answer:", answerElement);
     if (showAnswerButton.innerText === "Show Answer") {
       // animatioin
       answerElement.classList.remove("hidden");
@@ -42,10 +53,10 @@ showAnswerButton &&
       // remove hidden attribute
       answerElement.removeAttribute("hidden");
     } else {
+      console.log("test");
       // animation
       answerElement.classList.remove("visible");
       answerElement.classList.add("hidden");
-
       // wait until animation has ended, and then set hidden and change the button text
       setTimeout(() => {
         answerElement.setAttribute("hidden", true);
@@ -54,3 +65,4 @@ showAnswerButton &&
       }, 500);
     }
   });
+});
