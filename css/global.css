@@ -182,12 +182,40 @@ button.active svg {
   background-color: rgb(205, 205, 205);
 }
 
-/* Toggle Question / Answer */
+/* Toggle Question / Answer with Animation */
 .hidden {
-  visibility: hidden;
-  opacity: 0;
+  animation: fadeOut 0.5s ease-out forwards;
 }
 .visible {
-  visibility: visible;
-  opacity: 1;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
 }

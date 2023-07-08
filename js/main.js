@@ -28,19 +28,29 @@ darkmodeToggleButton.addEventListener("click", () => {
   [...htmlSections].forEach((section) => section.classList.toggle("lightmode"));
 });
 
-// Show Answer / Hide Answer
-console.log([showAnswerButton]);
+// Show Answer / Hide Answer Animation
 
+// if shoAnswerButton can not be assigned, do nothing
 showAnswerButton &&
   showAnswerButton.addEventListener("click", () => {
-    console.log("click!");
     if (showAnswerButton.innerText === "Show Answer") {
-      showAnswerButton.innerText = "Hide Answer";
+      // animatioin
       answerElement.classList.remove("hidden");
       answerElement.classList.add("visible");
+      // change button text
+      showAnswerButton.innerText = "Hide Answer";
+      // remove hidden attribute
+      answerElement.removeAttribute("hidden");
     } else {
-      showAnswerButton.innerText = "Show Answer";
+      // animation
       answerElement.classList.remove("visible");
       answerElement.classList.add("hidden");
+
+      // wait until animation has ended, and then set hidden and change the button text
+      setTimeout(() => {
+        answerElement.setAttribute("hidden", true);
+        // change button text
+        showAnswerButton.innerText = "Show Answer";
+      }, 500);
     }
   });
