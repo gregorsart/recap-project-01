@@ -159,22 +159,6 @@ hr {
   border: 1px solid rgba(255, 255, 255, 0.233);
 }
 
-/* Active Nav Element */
-
-.nav__list .active:hover {
-  color: var(--main-text-color);
-}
-
-.nav__list .active li {
-  background-color: var(--main-accent-color);
-}
-
-/* Active Bookmark Element */
-
-button.active svg {
-  color: var(--main-accent-color);
-}
-
 /* DARK MODE */
 
 .lightmode {

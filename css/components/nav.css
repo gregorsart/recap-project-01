@@ -9,8 +9,8 @@
   padding: 1rem 1rem;
 }
 
-.nav__list li:hover {
-  background-color: rgba(22, 85, 57, 0.233);
+.nav__list li:not(.active) svg:hover {
+  color: var(--main-accent-color);
 }
 
 .nav__list svg {
@@ -23,6 +23,22 @@
   color: var(--main-text-color);
 }
 
-.nav__list a:hover {
+.nav__list li:hover {
+  color: white;
+}
+
+/* Active Nav Element */
+
+.nav__list .active:hover {
+  color: var(--main-text-color);
+}
+
+.nav__list .active {
+  background-color: var(--main-accent-color);
+}
+
+/* Active Bookmark Element */
+
+button.active svg {
   color: var(--main-accent-color);
 }
