@@ -12,21 +12,17 @@ const darkmodeToggleButton = document.querySelector(
   '[data-js="darkmodeToggleButton"]'
 );
 
-// Show Answer / Hide Answer
-// const answerElements = document.querySelectorAll('[data-js="answer"]');
-// const showAnswerButtons = document.querySelectorAll(
-//   '[data-js="showAnswerButton"]'
-// );
-
 const htmlCards = document.querySelectorAll('[data-js="card"]');
-
-console.log("output:", htmlCards);
 
 // EVENT LISTENER & LOGIC
 
 // Lightmode / Darkmode
 
 darkmodeToggleButton.addEventListener("click", () => {
+  console.log([darkmodeToggleButton]);
+  darkmodeToggleButton.firstElementChild.classList.toggle(
+    "flipDarkmodeSwitcher"
+  );
   const htmlCollection = htmlBodyTag.children;
   for (let item of htmlCollection) {
     item.classList.toggle("lightmode");

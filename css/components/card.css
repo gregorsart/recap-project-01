@@ -76,3 +76,41 @@
 .card__icon--questionmark {
   color: salmon;
 }
+
+/* Toggle Question / Answer with Animation */
+.hidden {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+.visible {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}

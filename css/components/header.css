@@ -1,0 +1,24 @@
+.darkmode__button {
+  color: var(--main-text-color);
+}
+
+.darkmode__button svg {
+  padding-top: 0.6rem;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+header button header button:hover svg {
+  color: var(--main-accent-color);
+}
+
+/* DARK MODE */
+
+.lightmode {
+  color: var(--main-bg-color);
+  background-color: rgb(205, 205, 205);
+}
+
+.flipDarkmodeSwitcher {
+  transform: scale(-1, 1);
+}
