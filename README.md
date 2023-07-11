@@ -7,4 +7,4 @@
 - Make PR Request so that the rest of the team knows what you did
 
 
-[Preview zur Quizz App](https://gregorsart.github.io/recap-project-01/ "Preview zur Quizz App")
+[Preview zur Quiz App](https://gregorsart.github.io/recap-project-01/ "Preview zur Quiz App")
