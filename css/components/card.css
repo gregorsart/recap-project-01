@@ -1,0 +1,116 @@
+.card__button--bookmark {
+  position: absolute;
+  right: 0.5rem;
+  top: -0.8rem;
+  background-color: transparent;
+  border: 0;
+}
+
+.bookmark__icon {
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.bookmark__icon:hover {
+  color: salmon;
+  cursor: pointer;
+}
+
+.card__button {
+  align-self: center;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  width: max-content;
+  background-color: var(--main-accent-color);
+  border: 0;
+  padding: 0.8rem 2rem;
+  color: rgb(51, 66, 66);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.card__button:hover {
+  background-color: transparent;
+  border: 2px solid salmon;
+  color: var(--main-text-color);
+}
+
+.card__taglist {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+
+.taglist__item {
+  color: var(--main-text-color);
+  font-size: 0.8rem;
+  border: 1px solid var(--main-accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: var(--main-button-bg-color);
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dashed rgba(250, 128, 114, 0.473);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.card__answer {
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 1rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.card__answer svg {
+  align-self: center;
+}
+
+.card__icon--questionmark {
+  color: salmon;
+}
+
+/* Toggle Question / Answer with Animation */
+.hidden {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+.visible {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}

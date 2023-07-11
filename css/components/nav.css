@@ -1,0 +1,44 @@
+.nav__list {
+  height: 5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.nav__list li {
+  padding: 1rem 1rem;
+}
+
+.nav__list li:not(.active) svg:hover {
+  color: var(--main-accent-color);
+}
+
+.nav__list svg {
+  margin-top: 0.1rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.nav__list a {
+  color: var(--main-text-color);
+}
+
+.nav__list li:hover {
+  color: white;
+}
+
+/* Active Nav Element */
+
+.nav__list .active:hover {
+  color: var(--main-text-color);
+}
+
+.nav__list .active {
+  background-color: var(--main-accent-color);
+}
+
+/* Active Bookmark Element */
+
+button.active svg {
+  color: var(--main-accent-color);
+}
