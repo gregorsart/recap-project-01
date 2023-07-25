@@ -6,6 +6,7 @@
     <title>Quiz App // Recap Project I</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/main.js" defer></script>
+    <script src="./js/form.js" defer></script>
   </head>
   <body data-js="body">
     <header>
@@ -37,35 +38,47 @@
       </button>
     </header>
     <main>
-      <!-- Card Start -->
+      <!-- Form Start -->
       <section>
-        <button type="button" class="card__button--bookmark active">
-          <svg
-            class="bookmark__icon"
-            role="img"
-            aria-label="Bookmark Icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M5 21V5q0-.825.588-1.413T7 3h10q.825 0 1.413.588T19 5v16l-7-3l-7 3Z"
-            />
-          </svg>
-        </button>
-        <h2>How many headline types are there overall?</h2>
-        <button type="button" class="card__button" aria-label="show answer">
-          Show Answer
-        </button>
-        <ul class="card__taglist">
-          <li class="taglist__item">#html</li>
-          <li class="taglist__item">#semantic</li>
-          <li class="taglist__item">#css</li>
-        </ul>
+        <form data-js="form">
+          <div class="form__textarea">
+            <label class="textarea__label" for="question">Your Question:</label>
+            <textarea
+              class="textarea"
+              name="question"
+              id="question"
+              rows="6"
+              cols="33"
+              maxlength="76"
+              data-js="textarea-question"
+            ></textarea>
+            <p class="textarea__characters" data-js="characters-left-question">
+              &nbsp;
+            </p>
+          </div>
+          <div class="form__textarea">
+            <label class="textarea__label" for="answer">Your Answer:</label>
+            <textarea
+              class="textarea"
+              name="answer"
+              id="answer"
+              rows="6"
+              cols="33"
+              maxlength="150"
+              data-js="textarea-answer"
+            ></textarea>
+            <p class="textarea__characters" data-js="characters-left-answer">
+              &nbsp;
+            </p>
+          </div>
+          <div class="form__tags">
+            <label class="tags__label" for="tags">Tags:</label>
+            <input type="text" class="tags__input" name="tags" id="tags" />
+          </div>
+          <button class="form__button" type="submit">Hinzufügen</button>
+        </form>
       </section>
-      <!-- Card End -->
+      <!-- Form End -->
     </main>
     <footer>
       <nav>
@@ -89,7 +102,7 @@
             </a>
           </li>
           <!-- bookmark link -->
-          <li class="active">
+          <li>
             <a aria-label="go to bookmarks page" href="./bookmarks.html">
               <svg
                 role="img"
@@ -107,7 +120,7 @@
             </a>
           </li>
           <!-- add question link -->
-          <li>
+          <li class="active">
             <a aria-label="go to add question form" href="./form.html">
               <svg
                 role="img"
