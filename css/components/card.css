@@ -12,6 +12,10 @@
   border: 0;
 }
 
+.card__button--bookmark.active svg {
+  color: orangered;
+}
+
 .bookmark__icon {
   color: white;
   width: 2.5rem;

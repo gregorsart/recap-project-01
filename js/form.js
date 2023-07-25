@@ -1,6 +1,6 @@
 "use strict";
 console.clear();
-console.log("hello newbie");
+console.log("hello newbie, form");
 
 // VARIABLES
 const form = document.querySelector('[data-js="form"]');

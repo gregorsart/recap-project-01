@@ -1,7 +1,5 @@
 "use strict";
-
-console.clear();
-console.log("hello newbie");
+console.log("hello newbie, main");
 
 // VARIABLE DECLARATION
 
@@ -11,11 +9,20 @@ const htmlSections = document.querySelectorAll("section");
 const darkmodeToggleButton = document.querySelector(
   '[data-js="darkmodeToggleButton"]'
 );
+const bookmarkToggleButtons = document.querySelectorAll(
+  '[data-js="bookmark-button"]'
+);
 
 const htmlCards = document.querySelectorAll('[data-js="card"]');
 
 // EVENT LISTENER & LOGIC
 
+// Bookmark Icon
+bookmarkToggleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("active");
+  });
+});
 // Lightmode / Darkmode
 
 darkmodeToggleButton.addEventListener("click", () => {
