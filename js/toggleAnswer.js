@@ -2,12 +2,14 @@
 console.log("hello newbie, toggleAnswer");
 
 // Show Answer / Hide Answer Animation
-// Works for all the Cards that get added
 
+// LOGIC
 function toggleAnswer(card) {
   const showAnswerButton = card.querySelector('[data-js="showAnswerButton"]');
+  // Event Listener
   showAnswerButton.addEventListener("click", () => {
     const answerElement = card.querySelector('[data-js="answer"]');
+    console.log("click");
 
     if (showAnswerButton.innerText === "Show Answer") {
       // animatioin
@@ -30,8 +32,9 @@ function toggleAnswer(card) {
     }
   });
 }
-
+// VARIABLES
 const htmlCards = document.querySelectorAll('[data-js="card"]');
 [...htmlCards].forEach((card) => {
+  console.log("card:", card);
   toggleAnswer(card);
 });

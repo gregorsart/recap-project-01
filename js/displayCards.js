@@ -81,9 +81,10 @@ cards.forEach((card) => {
   // append
   svgElement.append(path);
 
-  // li element
+  // li element (card)
   const cardElement = document.createElement("li");
   cardElement.classList.add("card");
+  cardElement.setAttribute("data-js", "card");
   cardsUnorderedList.append(cardElement);
 
   // append multiple elements

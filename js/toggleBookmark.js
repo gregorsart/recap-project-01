@@ -1,5 +1,5 @@
 "use strict";
-console.log("hello newbie, main");
+console.log("hello newbie, toggle bookmark");
 
 // VARIABLE DECLARATION
 
