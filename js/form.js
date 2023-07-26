@@ -13,28 +13,31 @@ const questionTextarea = document.querySelector(
 );
 const answerTextarea = document.querySelector('[data-js="textarea-answer"]');
 
+// LOGIC
+
+function checkCharacterLength(textarea, paragraph) {
+  const totalLength = textarea.getAttribute("maxlength");
+  const inputLength = textarea.value.length;
+  const result = totalLength - inputLength;
+  paragraph.textContent = `${result} characters left`;
+}
+
 // EVENTS
 
 // Question
-questionTextarea.addEventListener("input", () => {
-  const totalLength = questionTextarea.getAttribute("maxlength");
-  const inputLength = questionTextarea.value.length;
-  const charactersLeft = document.querySelector(
+questionTextarea.addEventListener("input", (event) => {
+  const charactersRemaining = document.querySelector(
     '[data-js="characters-left-question"]'
   );
-
-  charactersLeft.textContent = `${totalLength - inputLength} characters left`;
+  checkCharacterLength(event.target, charactersRemaining);
 });
 
 //  Answer
-answerTextarea.addEventListener("input", () => {
-  const totalLength = answerTextarea.getAttribute("maxlength");
-  const inputLength = answerTextarea.value.length;
-  const charactersLeft = document.querySelector(
+answerTextarea.addEventListener("input", (event) => {
+  const charactersRemaining = document.querySelector(
     '[data-js="characters-left-answer"]'
   );
-
-  charactersLeft.textContent = `${totalLength - inputLength} characters left`;
+  checkCharacterLength(event.target, charactersRemaining);
 });
 
 form.addEventListener("submit", (event) => {
