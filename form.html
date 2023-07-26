@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App // Recap Project I</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./js/main.js" defer></script>
+    <script src="./js/form.js" defer></script>
   </head>
   <body data-js="body">
     <header>
@@ -37,83 +37,50 @@
       </button>
     </header>
     <main>
-      <!-- Card Start -->
+      <!-- Form Start -->
       <section>
-        <div class="profile">
-          <div class="profile__card">
-            <svg
-              role="img"
-              aria-label="Dummy profile image"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M12 11q.825 0 1.413-.588Q14 9.825 14 9t-.587-1.413Q12.825 7 12 7q-.825 0-1.412.587Q10 8.175 10 9q0 .825.588 1.412Q11.175 11 12 11Zm0 2q-1.65 0-2.825-1.175Q8 10.65 8 9q0-1.65 1.175-2.825Q10.35 5 12 5q1.65 0 2.825 1.175Q16 7.35 16 9q0 1.65-1.175 2.825Q13.65 13 12 13Zm0 11q-2.475 0-4.662-.938q-2.188-.937-3.825-2.574Q1.875 18.85.938 16.663Q0 14.475 0 12t.938-4.663q.937-2.187 2.575-3.825Q5.15 1.875 7.338.938Q9.525 0 12 0t4.663.938q2.187.937 3.825 2.574q1.637 1.638 2.574 3.825Q24 9.525 24 12t-.938 4.663q-.937 2.187-2.574 3.825q-1.638 1.637-3.825 2.574Q14.475 24 12 24Zm0-2q1.8 0 3.375-.575T18.25 19.8q-.825-.925-2.425-1.612q-1.6-.688-3.825-.688t-3.825.688q-1.6.687-2.425 1.612q1.3 1.05 2.875 1.625T12 22Zm-7.7-3.6q1.2-1.3 3.225-2.1q2.025-.8 4.475-.8q2.45 0 4.463.8q2.012.8 3.212 2.1q1.1-1.325 1.713-2.95Q22 13.825 22 12q0-2.075-.788-3.887q-.787-1.813-2.15-3.175q-1.362-1.363-3.175-2.151Q14.075 2 12 2q-2.05 0-3.875.787q-1.825.788-3.187 2.151Q3.575 6.3 2.788 8.113Q2 9.925 2 12q0 1.825.6 3.463q.6 1.637 1.7 2.937Z"
-              />
-            </svg>
-            <h2>Jane Doe</h2>
-          </div>
-          <div class="profile__info">
-            <h3>About me</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto
-              recusandae aut laudantium quos id, repudiandae voluptatibus
-              facilis. Minus, id repellendus!
+        <form data-js="form">
+          <div class="form__textarea">
+            <label class="textarea__label" for="question">Your Question:</label>
+            <textarea
+              class="textarea"
+              name="question"
+              id="question"
+              rows="6"
+              cols="33"
+              maxlength="76"
+              data-js="textarea-question"
+            ></textarea>
+            <p class="textarea__characters" data-js="characters-left-question">
+              &nbsp;
             </p>
           </div>
-          <div class="profile__tags">
-            <!-- Questions overall -->
-            <button
-              type="button"
-              class="profile__button"
-              data-js="amountOfQuestions"
-            >
-              <svg
-                role="img"
-                aria-label="Questions Icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M18 15H6l-4 4V3a1 1 0 0 1 1-1h15a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1m5-6v14l-4-4H8a1 1 0 0 1-1-1v-1h14V8h1a1 1 0 0 1 1 1M8.19 4c-.87 0-1.57.2-2.11.59c-.52.41-.78.98-.77 1.77l.01.03h1.93c.01-.3.1-.53.28-.69a1 1 0 0 1 .66-.23c.31 0 .57.1.75.28c.18.19.26.45.26.75c0 .32-.07.59-.23.82c-.14.23-.35.43-.61.59c-.51.34-.86.64-1.05.91C7.11 9.08 7 9.5 7 10h2c0-.31.04-.56.13-.74c.09-.18.26-.36.51-.52c.45-.24.82-.53 1.11-.93c.29-.4.44-.81.44-1.31c0-.76-.27-1.37-.81-1.82C9.85 4.23 9.12 4 8.19 4M7 11v2h2v-2H7m6 2h2v-2h-2v2m0-9v6h2V4h-2Z"
-                />
-              </svg>
-
-              12
-            </button>
-            <!-- Bookmarked Icons -->
-            <button type="button" class="profile__button">
-              <svg
-                role="img"
-                aria-label="Bookmarks Icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M5 21V5q0-.825.588-1.413T7 3h10q.825 0 1.413.588T19 5v16l-7-3l-7 3Z"
-                />
-              </svg>
-
-              4
-            </button>
+          <div class="form__textarea">
+            <label class="textarea__label" for="answer">Your Answer:</label>
+            <textarea
+              class="textarea"
+              name="answer"
+              id="answer"
+              rows="6"
+              cols="33"
+              maxlength="150"
+              data-js="textarea-answer"
+            ></textarea>
+            <p class="textarea__characters" data-js="characters-left-answer">
+              &nbsp;
+            </p>
           </div>
-          <hr />
-          <div class="profile__settings">
-            <h3>About this App</h3>
-            <p>Designed and coded by newbie</p>
+          <div class="form__tags">
+            <label class="tags__label" for="tags">Tags:</label>
+            <input type="text" class="tags__input" name="tags" id="tags" />
           </div>
-        </div>
+          <button class="form__button" type="submit">Hinzufügen</button>
+        </form>
       </section>
-      <!-- Card End -->
+      <section class="card" data-js="card">
+        <ul class="cards" data-js="cards-unordered-list"></ul>
+      </section>
+      <!-- Form End -->
     </main>
     <footer>
       <nav>
@@ -155,7 +122,7 @@
             </a>
           </li>
           <!-- add question link -->
-          <li>
+          <li class="active">
             <a aria-label="go to add question form" href="./form.html">
               <svg
                 role="img"
@@ -173,7 +140,7 @@
             </a>
           </li>
           <!-- profile link -->
-          <li class="active">
+          <li>
             <a aria-label="go to profile page" href="./profile.html">
               <svg
                 role="img"

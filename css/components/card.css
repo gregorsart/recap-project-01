@@ -1,9 +1,19 @@
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+
 .card__button--bookmark {
   position: absolute;
   right: 0.5rem;
   top: -0.8rem;
   background-color: transparent;
   border: 0;
+}
+
+.card__button--bookmark.active svg {
+  color: orangered;
 }
 
 .bookmark__icon {
