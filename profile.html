@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App // Recap Project I</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./js/main.js" defer></script>
+    <script src="./js/darkmode.js" defer></script>
+    <script src="./js/profileInfo.js" defer></script>
   </head>
   <body data-js="body">
     <header>
@@ -66,11 +67,7 @@
           </div>
           <div class="profile__tags">
             <!-- Questions overall -->
-            <button
-              type="button"
-              class="profile__button"
-              data-js="amountOfQuestions"
-            >
+            <button type="button" class="profile__button">
               <svg
                 role="img"
                 aria-label="Questions Icon"
@@ -85,7 +82,7 @@
                 />
               </svg>
 
-              12
+              <span data-js="amount-of-questions"> &nbsp;</span>
             </button>
             <!-- Bookmarked Icons -->
             <button type="button" class="profile__button">
@@ -102,8 +99,7 @@
                   d="M5 21V5q0-.825.588-1.413T7 3h10q.825 0 1.413.588T19 5v16l-7-3l-7 3Z"
                 />
               </svg>
-
-              4
+              <span data-js="amount-of-bookmarks">&nbsp;</span>
             </button>
           </div>
           <hr />
