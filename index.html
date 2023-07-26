@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/darkmode.js" defer></script>
     <script src="./js/toggleAnswer.js" defer></script>
+    <script src="./js/displayCards.js" defer></script>
     <script src="./js/main.js" defer></script>
   </head>
   <body data-js="body">
@@ -39,113 +40,11 @@
       </button>
     </header>
     <main>
-      <!-- Card Start -->
-      <section class="card" data-js="card">
-        <button
-          type="button"
-          class="card__button--bookmark"
-          data-js="bookmark-button"
-        >
-          <svg
-            class="bookmark__icon"
-            role="img"
-            aria-label="Bookmark Icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M5 21V5q0-.825.588-1.413T7 3h10q.825 0 1.413.588T19 5v16l-7-3l-7 3Z"
-            />
-          </svg>
-        </button>
-        <div class="card__container">
-          <h2 data-js="question">What property flips the axes in flexbox?</h2>
-          <div class="card__wrapper">
-            <svg
-              class="card__icon--questionmark"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 512 512"
-            >
-              <path
-                fill="currentColor"
-                d="M379.063 148.114c0 89.948-99.942 83.84-99.942 146.026v.336c0 7.174-5.815 12.989-12.989 12.989h-54.53c-7.174 0-12.989-5.815-12.989-12.989v-3.668c0-96.055 87.727-89.947 87.727-134.921c0-19.433-14.436-31.093-38.311-31.093c-19.423 0-39.271 8.493-57.314 25.851c-4.624 4.448-11.854 4.729-16.907.776l-35.862-28.05c-6.044-4.727-6.745-13.685-1.402-19.193c29.94-30.865 68.846-49.343 120.369-49.343c81.618.001 122.15 43.864 122.15 93.279zm-88.838 260.403c0 27.762-22.209 50.526-50.525 50.526c-27.762 0-50.526-22.764-50.526-50.526c0-27.761 22.764-50.525 50.526-50.525c28.317 0 50.525 22.764 50.525 50.525z"
-              />
-            </svg>
-            <h2 class="card__answer hidden" data-js="answer" hidden>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur quidem aperiam dolore est porro libero dolor, laborum
-              possimus provident corporis?
-            </h2>
-          </div>
-        </div>
-        <button type="button" class="card__button" data-js="showAnswerButton">
-          Show Answer
-        </button>
-        <ul class="card__taglist">
-          <li class="taglist__item">#html</li>
-          <li class="taglist__item">#flexbox</li>
-          <li class="taglist__item">#css</li>
-        </ul>
+      <!-- Cards Dynamic Start -->
+      <section data-js="card">
+        <ul class="cards" data-js="cards-unordered-list"></ul>
       </section>
-      <!-- Card End -->
-      <!-- Card Start -->
-      <section class="card" data-js="card">
-        <button
-          type="button"
-          class="card__button--bookmark"
-          data-js="bookmark-button"
-        >
-          <svg
-            class="bookmark__icon"
-            role="img"
-            aria-label="Bookmark Icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M5 21V5q0-.825.588-1.413T7 3h10q.825 0 1.413.588T19 5v16l-7-3l-7 3Z"
-            />
-          </svg>
-        </button>
-        <div class="card__container">
-          <h2 data-js="question">How many headline types are there overall?</h2>
-          <div class="card__wrapper">
-            <svg
-              class="card__icon--questionmark"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 512 512"
-            >
-              <path
-                fill="currentColor"
-                d="M379.063 148.114c0 89.948-99.942 83.84-99.942 146.026v.336c0 7.174-5.815 12.989-12.989 12.989h-54.53c-7.174 0-12.989-5.815-12.989-12.989v-3.668c0-96.055 87.727-89.947 87.727-134.921c0-19.433-14.436-31.093-38.311-31.093c-19.423 0-39.271 8.493-57.314 25.851c-4.624 4.448-11.854 4.729-16.907.776l-35.862-28.05c-6.044-4.727-6.745-13.685-1.402-19.193c29.94-30.865 68.846-49.343 120.369-49.343c81.618.001 122.15 43.864 122.15 93.279zm-88.838 260.403c0 27.762-22.209 50.526-50.525 50.526c-27.762 0-50.526-22.764-50.526-50.526c0-27.761 22.764-50.525 50.526-50.525c28.317 0 50.525 22.764 50.525 50.525z"
-              />
-            </svg>
-            <h2 class="card__answer hidden" data-js="answer" hidden>
-              There are h1, h2, h3, h4, h5 and h6. Every Page has only one
-              single h1.
-            </h2>
-          </div>
-        </div>
-        <button type="button" class="card__button" data-js="showAnswerButton">
-          Show Answer
-        </button>
-        <ul class="card__taglist">
-          <li class="taglist__item">#html</li>
-          <li class="taglist__item">#semantic</li>
-          <li class="taglist__item">#css</li>
-        </ul>
-      </section>
-      <!-- Card End -->
+      <!-- Cards Dynamic End -->
     </main>
     <footer>
       <nav>

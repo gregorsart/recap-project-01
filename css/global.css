@@ -56,8 +56,8 @@
   --main-accent-color: salmon;
   --main-text-color: white;
   --main-width-mobile: 400px;
-  --main-button-bg-color: rgba(34, 83, 83, 0.681);
-  --main-card-bg-color: rgba(22, 85, 57, 0.233);
+  --main-button-bg-color: rgb(34, 83, 80);
+  --main-card-bg-color: rgba(56, 238, 174, 0.1);
 }
 
 .darkmode {
@@ -109,10 +109,10 @@ footer {
 }
 
 section {
-  background-color: var(--main-card-bg-color);
+  background-color: var(--main-bg-color);
   position: relative;
-  padding: 1rem 1rem;
-  border: 2px solid var(--main-text-color);
+  padding: 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.197);
   border-radius: 1rem;
   display: flex;
   flex-flow: column nowrap;
