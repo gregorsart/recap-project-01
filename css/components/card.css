@@ -5,6 +5,7 @@
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   gap: 2rem;
@@ -21,8 +22,16 @@
   border: 0;
 }
 
+.card__button--trash {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.6rem;
+  background-color: transparent;
+  border: 0;
+}
+
 .card__button--bookmark.active svg {
-  color: orangered;
+  color: rgba(255, 68, 0, 0.822);
 }
 
 .bookmark__icon {
@@ -31,7 +40,14 @@
   height: 2.5rem;
 }
 
-.bookmark__icon:hover {
+.trash__icon {
+  color: white;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.bookmark__icon:hover,
+.trash__icon:hover {
   color: salmon;
   cursor: pointer;
 }

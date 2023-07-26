@@ -52,7 +52,6 @@ form.addEventListener("submit", (event) => {
 
   // push into cards
   cards.push(cardDataObject);
-  console.log(cards);
   // save in local storage
   localStorage.setItem("cards", JSON.stringify(cards));
 

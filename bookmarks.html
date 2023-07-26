@@ -6,7 +6,8 @@
     <title>Quiz App // Recap Project I</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/darkmode.js" defer></script>
-    <script src="./js/toggleBookmark.js" defer></script>
+    <script src="./js/renderCards.js" defer></script>
+    <script src="./js/bookmarks.js" defer></script>
   </head>
   <body data-js="body">
     <header>
@@ -38,39 +39,11 @@
       </button>
     </header>
     <main>
-      <!-- Card Start -->
-      <section>
-        <button
-          type="button"
-          class="card__button--bookmark active"
-          data-js="bookmark-button"
-        >
-          <svg
-            class="bookmark__icon"
-            role="img"
-            aria-label="Bookmark Icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M5 21V5q0-.825.588-1.413T7 3h10q.825 0 1.413.588T19 5v16l-7-3l-7 3Z"
-            />
-          </svg>
-        </button>
-        <h2>How many headline types are there overall?</h2>
-        <button type="button" class="card__button" aria-label="show answer">
-          Show Answer
-        </button>
-        <ul class="card__taglist">
-          <li class="taglist__item">#html</li>
-          <li class="taglist__item">#semantic</li>
-          <li class="taglist__item">#css</li>
-        </ul>
+      <!-- Cards Dynamic Start -->
+      <section">
+        <ul class="cards" data-js="cards-unordered-list"></ul>
       </section>
-      <!-- Card End -->
+      <!-- Cards Dynamic End -->
     </main>
     <footer>
       <nav>
