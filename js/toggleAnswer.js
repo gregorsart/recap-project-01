@@ -34,7 +34,7 @@ function toggleAnswer(card) {
 }
 // VARIABLES
 const htmlCards = document.querySelectorAll('[data-js="card"]');
-[...htmlCards].forEach((card) => {
+htmlCards.forEach((card) => {
   console.log("card:", card);
   toggleAnswer(card);
 });
