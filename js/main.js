@@ -6,9 +6,7 @@ console.log("hello newbie, main");
 // Lightmode / Darkmode
 const htmlBodyTag = document.querySelector('[data-js="body"]');
 const htmlSections = document.querySelectorAll("section");
-const darkmodeToggleButton = document.querySelector(
-  '[data-js="darkmodeToggleButton"]'
-);
+
 const bookmarkToggleButtons = document.querySelectorAll(
   '[data-js="bookmark-button"]'
 );
@@ -22,19 +20,6 @@ bookmarkToggleButtons.forEach((button) => {
   button.addEventListener("click", () => {
     button.classList.toggle("active");
   });
-});
-// Lightmode / Darkmode
-
-darkmodeToggleButton.addEventListener("click", () => {
-  console.log([darkmodeToggleButton]);
-  darkmodeToggleButton.firstElementChild.classList.toggle(
-    "flipDarkmodeSwitcher"
-  );
-  const htmlCollection = htmlBodyTag.children;
-  for (let item of htmlCollection) {
-    item.classList.toggle("lightmode");
-  }
-  [...htmlSections].forEach((section) => section.classList.toggle("lightmode"));
 });
 
 // Show Answer / Hide Answer Animation

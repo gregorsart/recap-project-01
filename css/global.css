@@ -57,6 +57,15 @@
   --main-text-color: white;
   --main-width-mobile: 400px;
   --main-button-bg-color: rgba(34, 83, 83, 0.681);
+  --main-card-bg-color: rgba(22, 85, 57, 0.233);
+}
+
+.darkmode {
+  --main-bg-color: rgb(205, 205, 205);
+  --main-accent-color: salmon;
+  --main-text-color: rgb(51, 66, 66);
+  --main-button-bg-color: rgba(138, 138, 138, 0.681);
+  --main-card-bg-color: rgb(172, 172, 172);
 }
 
 /* General Styles */
@@ -100,7 +109,7 @@ footer {
 }
 
 section {
-  background-color: rgba(22, 85, 57, 0.233);
+  background-color: var(--main-card-bg-color);
   position: relative;
   padding: 1rem 1rem;
   border: 2px solid var(--main-text-color);

@@ -1,5 +1,4 @@
 "use strict";
-console.clear();
 console.log("hello newbie, form");
 
 // VARIABLES ---------------------------------------------------
