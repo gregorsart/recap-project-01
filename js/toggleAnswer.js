@@ -1,4 +1,4 @@
-"use strict";
+("use strict");
 console.log("hello newbie, toggleAnswer");
 
 // Show Answer / Hide Answer Animation
@@ -9,7 +9,6 @@ function toggleAnswer(card) {
   // Event Listener
   showAnswerButton.addEventListener("click", () => {
     const answerElement = card.querySelector('[data-js="answer"]');
-    console.log("click");
 
     if (showAnswerButton.innerText === "Show Answer") {
       // animatioin
@@ -35,6 +34,5 @@ function toggleAnswer(card) {
 // VARIABLES
 const htmlCards = document.querySelectorAll('[data-js="card"]');
 htmlCards.forEach((card) => {
-  console.log("card:", card);
   toggleAnswer(card);
 });
