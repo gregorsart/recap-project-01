@@ -57,21 +57,36 @@ function renderCardsConditionally(cards) {
     const buttonBookmarkElement = document.createElement("button");
     buttonBookmarkElement.classList.add("card__button--bookmark");
     buttonBookmarkElement.setAttribute("data-js", "bookmark-button");
+    // Event Listener
     buttonBookmarkElement.addEventListener("click", () => {
       //  Here I change the boolean value of a card obeject, then I get all the cards except the one I altered and finally I add the altered card back in via push. This approach feels wrong, but it works
+
+      // cards.forEach((cardElement) => {
+      //   if (cardElement.id === card.id) {
+      //     cardElement.bookmarked = !cardElement.bookmarked;
+      //   }
+      // });
+
       const alteredCardObject = {
         ...card,
         bookmarked: !card.bookmarked,
       };
       const filteredArray = cards.filter(
-        (cardElement) => card.id != cardElement.id
+        (cardElement) => cardElement.id != card.id
       );
-      filteredArray.push(alteredCardObject);
-      // const alteredCardsArray = [...cards, alteredCardObject];
+      // filteredArray.push(alteredCardObject);
+      const alteredCardsArray = [...filteredArray, alteredCardObject];
 
-      localStorage.setItem("cards", JSON.stringify(filteredArray));
+      localStorage.setItem("cards", JSON.stringify(alteredCardsArray));
+
       buttonBookmarkElement.classList.toggle("active");
     });
+
+    // set initial state of bookmark UI or bookmark.html
+    buttonBookmarkElement.classList.remove("active");
+    if (card.bookmarked) {
+      buttonBookmarkElement.classList.add("active");
+    }
 
     // svg element bookmark ------------------------------------
     const svgElement = document.createElementNS(
