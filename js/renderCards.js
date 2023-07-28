@@ -53,32 +53,40 @@ function renderCardsConditionally(cards) {
     buttonMainElement.classList.add("card__button");
     buttonMainElement.textContent = "Show Answer";
 
-    // bookmark button element with logic ----------------------
+    // bookmark button element with LOGIC ----------------------
     const buttonBookmarkElement = document.createElement("button");
     buttonBookmarkElement.classList.add("card__button--bookmark");
     buttonBookmarkElement.setAttribute("data-js", "bookmark-button");
-    // Event Listener
+    // EVENT
     buttonBookmarkElement.addEventListener("click", () => {
-      //  Here I change the boolean value of a card obeject, then I get all the cards except the one I altered and finally I add the altered card back in via push. This approach feels wrong, but it works
+      //  Here I change the boolean value of a card obeject, then I get all the cards except the one I altered and finally I add the altered card back in via push. This approach feels wrong, but it works somehow.
 
+      // TRY 01
       // cards.forEach((cardElement) => {
       //   if (cardElement.id === card.id) {
       //     cardElement.bookmarked = !cardElement.bookmarked;
       //   }
       // });
 
-      const alteredCardObject = {
-        ...card,
-        bookmarked: !card.bookmarked,
-      };
-      const filteredArray = cards.filter(
-        (cardElement) => cardElement.id != card.id
-      );
+      // TRY 02
+      // const alteredCardObject = {
+      //   ...card,
+      //   bookmarked: !card.bookmarked,
+      // };
+      // const filteredArray = cards.filter(
+      //   (cardElement) => cardElement.id != card.id
+      // );
       // filteredArray.push(alteredCardObject);
-      const alteredCardsArray = [...filteredArray, alteredCardObject];
+      // const alteredCardsArray = [...filteredArray, alteredCardObject];
 
-      localStorage.setItem("cards", JSON.stringify(alteredCardsArray));
+      // Try03 Niklas
+      const filteredArray = cards.map((cardElement) => {
+        return cardElement.id === card.id
+          ? { ...card, bookmarked: !cardElement.bookmarked }
+          : cardElement;
+      });
 
+      localStorage.setItem("cards", JSON.stringify(filteredArray));
       buttonBookmarkElement.classList.toggle("active");
     });
 
@@ -109,13 +117,14 @@ function renderCardsConditionally(cards) {
     // append
     buttonBookmarkElement.append(svgElement);
 
-    // trash button element with logic -------------------------
+    // trash button element with LOGIC -------------------------
     const buttonTrashElement = document.createElement("button");
     buttonTrashElement.classList.add("card__button--trash");
     buttonTrashElement.setAttribute("data-js", "trash-button");
+    // EVENT
     buttonTrashElement.addEventListener("click", () => {
       const filteredArray = cards.filter(
-        (cardElement) => cardElement.id != card.id
+        (cardElement) => cardElement.id !== card.id
       );
       localStorage.setItem("cards", JSON.stringify(filteredArray));
       buttonBookmarkElement.classList.toggle("active");
