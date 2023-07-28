@@ -50,7 +50,6 @@ form.addEventListener("submit", (event) => {
   // get from local storage or empty array
   // localStorage.clear();
   const cards = JSON.parse(localStorage.getItem("cards")) ?? [];
-  console.log(cards);
 
   // push into cards
   cards.push(cardDataObject);
