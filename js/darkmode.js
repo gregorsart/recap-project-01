@@ -12,6 +12,9 @@ const darkmode = JSON.parse(localStorage.getItem("darkmode")) ?? true;
 // local storage UPDATE
 if (!darkmode) {
   document.body.classList.add("darkmode");
+  darkmodeToggleButton.firstElementChild.classList.toggle(
+    "flipDarkmodeSwitcher"
+  );
 }
 
 darkmodeToggleButton.addEventListener("click", () => {
@@ -27,4 +30,6 @@ darkmodeToggleButton.addEventListener("click", () => {
   darkmodeToggleButton.firstElementChild.classList.toggle(
     "flipDarkmodeSwitcher"
   );
+  // Refresh the page
+  location.reload();
 });

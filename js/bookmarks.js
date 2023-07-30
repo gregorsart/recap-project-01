@@ -5,5 +5,5 @@ console.log("hello newbie, bookmarks");
 const cards = JSON.parse(localStorage.getItem("cards")) ?? [];
 // call function from renderCards.js
 
-const filteredCards = cards.filter((card) => card.bookmarked === true);
+const filteredCards = cards.filter((card) => card.bookmarked);
 renderCardsConditionally(filteredCards);
