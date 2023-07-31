@@ -48,11 +48,11 @@ form.addEventListener("submit", (event) => {
     bookmarked: false,
   };
   // get from local storage or empty array
+  // localStorage.clear();
   const cards = JSON.parse(localStorage.getItem("cards")) ?? [];
 
   // push into cards
   cards.push(cardDataObject);
-  console.log(cards);
   // save in local storage
   localStorage.setItem("cards", JSON.stringify(cards));
 
