@@ -67,7 +67,7 @@ function renderCardsConditionally(cards) {
       //     cardElement.bookmarked = !cardElement.bookmarked;
       //   }
       // });
-
+      //
       // TRY 02
       // const alteredCardObject = {
       //   ...card,
@@ -78,18 +78,30 @@ function renderCardsConditionally(cards) {
       // );
       // filteredArray.push(alteredCardObject);
       // const alteredCardsArray = [...filteredArray, alteredCardObject];
-
+      //
       // Try03 Niklas
-      const filteredArray = cards.map((cardElement) => {
+      // const filteredArray = cards.map((cardElement) => {
+      //   return cardElement.id === card.id
+      //     ? { ...card, bookmarked: !cardElement.bookmarked }
+      //     : cardElement;
+      // });
+      // localStorage.setItem("cards", JSON.stringify(filteredArray));
+      // buttonBookmarkElement.classList.toggle("active");
+      //
+      // Try04 Niklas
+      // Always when clicking the bookmark button, geht a fresh copy of the cards from the local storage
+      const myCards = JSON.parse(localStorage.getItem("cards")) ?? cards;
+      const filteredArray = myCards.map((cardElement) => {
         return cardElement.id === card.id
           ? { ...card, bookmarked: !cardElement.bookmarked }
           : cardElement;
       });
-
+      // important to set local storage with the information (bookmarked true or false) of the filteredCards from the bookmarks.js ...
       localStorage.setItem("cards", JSON.stringify(filteredArray));
       buttonBookmarkElement.classList.toggle("active");
+      // Reload page
+      location.reload();
     });
-
     // set initial state of bookmark UI or bookmark.html
     buttonBookmarkElement.classList.remove("active");
     if (card.bookmarked) {
@@ -128,6 +140,8 @@ function renderCardsConditionally(cards) {
       );
       localStorage.setItem("cards", JSON.stringify(filteredArray));
       buttonBookmarkElement.classList.toggle("active");
+      // Reload page
+      location.reload();
     });
 
     // svg element trash --------------------------------------
